@@ -175,6 +175,7 @@ p{
         width: 20px;
         height: 16px;
         position: relative;
+        border-radius: 0;
         z-index: 1;
         span{
             display: block;
@@ -544,7 +545,7 @@ p{
                 }
             }
             .carousel-indicators{
-                justify-content: space-between;
+                justify-content: space-evenly;
                 li{
                     font-size: 10px;
                     margin-right: 0;
@@ -643,6 +644,8 @@ p{
         }
     }
     @media(max-width: 425px){
+        height: auto;
+        padding: 20vw 0 20vw;
         .top-content{
             h2{
                 margin-bottom: 20px;
@@ -775,6 +778,7 @@ p{
                 letter-spacing: -0.05em;
                 margin: 0 5px;
                 transition: all .3s ease-in-out;
+                border-radius: 0;
                 &:focus{
                     border-bottom: 2px solid rgba(255, 255, 255, 1);
                 }
@@ -844,7 +848,8 @@ p{
         }
     }
     @media(max-width: 575px){
-        height: 90vh;
+        height: auto;
+        padding: 15vh 0 8vh;
         text-align: center;
         form{
             max-width: 80%;
@@ -852,12 +857,14 @@ p{
             .field-group{
                 span,
                 label{
+                    text-align: left;
                     font-size: 15px;
                     line-height: 20px;
                     letter-spacing: -0.02em;
                 }
                 input,
                 textarea{
+                    text-align: left;
                     font-size: 15px;
                     line-height: 20px;
                     letter-spacing: -0.02em;
