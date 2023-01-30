@@ -4,38 +4,402 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <title>Elipse Agency (ea)</title>
     <meta name="description" content="Founded in 1999, ElipseAgency has grown to become one of the most recognized design firms in the world, with over 100 clients in the United States, Mexico, Argentina, Uruguay, Panama, Spain, New Zealand and the United Kingdom among other countries.">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #000000;
-        }
-        section{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            height: 100vh;
-            width: 100%;
-            text-transform: uppercase;
-            font-family: sans-serif;
-        }
-        section span{
-            text-transform: lowercase;
-        }
-        section p{
-            color: #ffffff;
-            margin: 0 0 5px;
-        }
-    </style>
-    <section>
-        <p><strong>Elipse Agency <span>(ea)</span></strong></p>
-        <p>coming soon</p>
-    </section>
+<body class="loading">
+    <!-- WRAPPER -->
+    <div id="wrapper">
+
+        <div class="preloader">
+            <img src="assets/preload.gif" class="logo-loader" alt="Elipse Agency (ea)">
+        </div>
+
+        <!-- HEADER -->
+        <header>
+            <nav class="navbar navbar-light fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="/">
+                        <img src="assets/elipseagency-white.png" class="white" alt="Elipse Agency (ea)">
+                        <img src="assets/elipseagency-black.png" class="dark" alt="Elipse Agency (ea)">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <input type="checkbox" class="toggler-init">
+                        <span class="bar-one"></span> 
+                        <span class="bar-two"></span>
+                        <span class="bar-three"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Our Story</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Philosophy</a>
+                        </li>
+                    </ul>
+                    <div class="brand-box">
+                        <span class="bottom-text">
+                            elipse agency
+                        </span>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- HERO -->
+        <section id="hero" data-background='dark'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="hero-content">
+                            <h1>We love design.</h1>
+                            <img src="assets/arrow-white.png" alt="Arrow to scroll down">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDER SECTIONS -->
+        <section id="slider-sections" data-background='light'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="carouselSection" class="carousel slide" data-ride="carousel" data-wrap="false" data-pause="false">
+                            <ol class="carousel-indicators">
+                            <li data-target="#carouselSection" data-slide-to="0" class="active">
+                                <span></span>
+                                About Us
+                            </li>
+                            <li data-target="#carouselSection" data-slide-to="1">
+                                <span></span>
+                                Our Story
+                            </li>
+                            <li data-target="#carouselSection" data-slide-to="2">
+                                <span></span>
+                                Philosophy
+                            </li>
+                            </ol>
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <p class="pre-title animate__animated animate__fadeIn animate__delay-300ms">About Us</p>
+                                <h2 class="animate__animated animate__fadeIn animate__delay-500ms">Design that makes an impact, used by billions everyday.</h2>
+                                <p class="animate__animated animate__fadeIn animate__delay-700ms">Crafting world-class digital experiences that drive growth, <strong> since 1999.</strong></p>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="pre-title animate__animated animate__fadeIn animate__delay-300ms">Our Story</p>
+                                <h2 class="animate__animated animate__fadeIn animate__delay-500ms">Lorem ipsum dolor sit amet conser adipisicing elit.</h2>
+                                <p class="animate__animated animate__fadeIn animate__delay-700ms">Lorem ipsum dolor sit amet consecr adipisicing elit. Placeat, repudiandae quia labore maxime.</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p class="pre-title animate__animated animate__fadeIn animate__delay-300ms">Philosophy</p>
+                                <h2 class="animate__animated animate__fadeIn animate__delay-500ms">Lorem ipsum dolor sit amet conseur.</h2>
+                                <p class="animate__animated animate__fadeIn animate__delay-700ms">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, repudiandae.</p>
+                            </div>
+                            </div>
+                            <button class="carousel-control carousel-control-prev" type="button" data-target="#carouselSection" data-slide="prev">
+                            <span class="icon carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                            </button>
+                            <button class="carousel-control carousel-control-next" type="button" data-target="#carouselSection" data-slide="next">
+                            <span class="icon carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR EXPERIENCE -->
+        <section id="experience" data-background='dark'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-content">
+                            <p class="pre-title">Our Experience</p>
+                            <h2>Design that creates value for companies and ignites growth.</h2>
+                            <p>From early-stage startups to <strong>Fortune 500</strong> companies, over 600 brands, products and experiences designed by EA.</p>
+                        </div>
+                        <div class="marquee" tr-marquee-element="component" tr-marquee-speed="100">
+                            <div class="container-marquee" tr-marquee-element="triggerhover">
+                                <div class="marquee-photos" tr-marquee-element="panel">
+                                    <div class="brand">
+                                        <img src="assets/brands/google.jpg" alt="Google">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/cocacola.jpg" alt="Coca Cola">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/twitter.jpg" alt="Twitter">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/sony.jpg" alt="Sony">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/walmart.jpg" alt="Walmart">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/patriots.jpg" alt="Patriots">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/virgin.jpg" alt="Virgin">
+                                    </div>
+                                </div>
+                                <div class="marquee-photos" tr-marquee-element="panel">
+                                    <div class="brand">
+                                        <img src="assets/brands/google.jpg" alt="Google">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/cocacola.jpg" alt="Coca Cola">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/twitter.jpg" alt="Twitter">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/sony.jpg" alt="Sony">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/walmart.jpg" alt="Walmart">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/patriots.jpg" alt="Patriots">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/virgin.jpg" alt="Virgin">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-cta">
+                            <a href="#">Our Clients <img src="assets/arrow-white.png" alt="Arrow to scroll down"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE IMPACT -->
+        <section id="impact" data-background='light'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-content">
+                            <p class="pre-title">The Impact</p>
+                            <h2>Design experiences that get people talking.</h2>
+                            <p>Our award-winning designs give people an experience worth talking about, and have been extensively featured in major media publications.</p>
+                        </div>
+                        <div class="marquee" tr-marquee-element="component" tr-marquee-speed="100">
+                            <div class="container-marquee" tr-marquee-element="triggerhover">
+                                <div class="marquee-photos" tr-marquee-element="panel">
+                                    <div class="brand">
+                                        <img src="assets/brands/forbes.jpg" alt="Forbes">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/cbs.jpg" alt="CBS">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/wsj.jpg" alt="The Wall Street Journals">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/cnet.jpg" alt="c|net">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/business-journal.jpg" alt="Silicon Valley Business Journal">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/yahoo-finances.jpg" alt="Yahoo! Finance">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/boston-globe.jpg" alt="The Boston Globe">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/cnet.jpg" alt="c|net">
+                                    </div>
+                                </div>
+                                <div class="marquee-photos" tr-marquee-element="panel">
+                                    <div class="brand">
+                                        <img src="assets/brands/forbes.jpg" alt="Forbes">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/cbs.jpg" alt="CBS">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/wsj.jpg" alt="The Wall Street Journals">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/cnet.jpg" alt="c|net">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/business-journal.jpg" alt="Silicon Valley Business Journal">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/yahoo-finances.jpg" alt="Yahoo! Finance">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/boston-globe.jpg" alt="The Boston Globe">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/cnet.jpg" alt="c|net">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="marquee" tr-marquee-element="component" tr-marquee-speed="80">
+                            <div class="container-marquee" tr-marquee-element="triggerhover">
+                                <div class="marquee-photos" tr-marquee-element="panel">
+                                    <div class="brand">
+                                        <img src="assets/brands/nyt.jpg" alt="New York Times">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/bbc.jpg" alt="BBC">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/tnw.jpg" alt="TNW">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/nbc-news.jpg" alt="NBC News">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/the-guardian.jpg" alt="The Guardian">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/los-angeles-time.jpg" alt="Los Angeles Times">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/vox.jpg" alt="VOX">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/inc.jpg" alt="INC">
+                                    </div>
+                                </div>
+                                <div class="marquee-photos" tr-marquee-element="panel">
+                                    <div class="brand">
+                                        <img src="assets/brands/nyt.jpg" alt="New York Times">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/bbc.jpg" alt="BBC">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/tnw.jpg" alt="TNW">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/nbc-news.jpg" alt="NBC News">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/the-guardian.jpg" alt="The Guardian">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/los-angeles-time.jpg" alt="Los Angeles Times">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/vox.jpg" alt="VOX">
+                                    </div>
+                                    <div class="brand">
+                                        <img src="assets/brands/inc.jpg" alt="INC">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" data-background='dark'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-content">
+                            <h2>Design that <br class="d-none d-sm-block"> starts with “hello”.</h2>
+                        </div>
+                        <form action="#" method="POST">
+                            <div class="field-group">
+                                <label for="name"><strong>Hello</strong>, my name is</label>
+                                <input type="text" name="name" id="name">
+        
+                                <label for="company">and I work at</label>
+                                <input type="text" name="company" id="company">
+                            </div>
+
+                            <div class="field-group">
+                                <label for="email">My email is</label>
+                                <input type="email" name="email" id="email" required>
+        
+                                <span>, and I’m contacting EA because</span>
+                            </div>
+
+                            <div class="field-group">
+                                <textarea name="message" id="message"></textarea>
+                            </div>
+
+                            <div class="field-group submit">
+                                <img src="assets/arrow-right.png" alt="Arrow to Send button">
+                                <input type="submit" value="Send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>   
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-11">
+                        <p class="copy">
+                            Copyright © <script>document.write(new Date().getFullYear());</script> ElipseAgency, LLC. All Rights Reserved. 
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-1">
+                        <div class="social-box">
+                            <a href="#">
+                                <img src="assets/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <!-- ANIME JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- MARQUEE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- WOW JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- SPLIT TEXT -->
+    <script src="https://unpkg.com/split-type"></script>
+    <!-- JAVASCRIPT -->
+    <script defer src="js/index.js"></script>
 </body>
 </html>
