@@ -1,73 +1,106 @@
 $(window).on('load', function(){
-    // REMOVE PRELOADER
-    $("body").removeClass("loading");
-    $(".preloader").fadeOut(1000);
+  // REMOVE PRELOADER
+  $("body").removeClass("loading");
+  $(".preloader").fadeOut(1000);
 
-    // INIT WOW JS
-	wow = new WOW({
-		boxClass: 'animate',
-		animateClass: 'animated',
-		offset: 200,
-		mobile: true,
-	});
-	wow.init();
+  // SCROLL BETWEEN SECTIONS
+  // const sections = [...document.querySelectorAll("section")];
 
-    // NAV LINK HOVER
-    let typeSplit = new SplitType(".nav-link", {
-        types: "words, chars",
-        tagName: "span"
-      });
-      
-      function getRandomLetter(length) {
-        var result = "";
-        var characters = "AbcDefghiJklmnOpqrstUvwxYz";
-        var charactersLength = characters.length;
-        for (var i = 0; i < length; i++) {
-          result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }
-        return result;
+  // let options = {
+  //   rootMargin: "0px",
+  //   threshold: 0.95,
+  // }; 
+
+  // const callback = (entries, observer) => {
+  //   entries.forEach((entry) => {
+  //     const { target } = entry;
+
+  //     if (entry.intersectionRatio >= 0.95) {
+  //       target.classList.add("is-visible");
+  //     } else {
+  //       target.classList.remove("is-visible");
+  //     }
+  //   });
+  // };
+
+  // const observer = new IntersectionObserver(callback, options);
+
+  // sections.forEach((section, index) => {
+  //   // const sectionChildren = [...section.querySelector("[data-content]").children];
+
+  //   // sectionChildren.forEach((el, index) => {
+  //   //   el.style.setProperty("--delay", `${index * 250}ms`);
+  //   // });
+
+  //   observer.observe(section);
+  // }); 
+
+
+  // INIT WOW JS
+  wow = new WOW({
+    boxClass: 'animate',
+    animateClass: 'animated',
+    offset: 200,
+    mobile: true,
+  });
+  wow.init();
+
+  // NAV LINK HOVER
+  let typeSplit = new SplitType(".nav-link", {
+      types: "words, chars",
+      tagName: "span"
+    });
+    
+    function getRandomLetter(length) {
+      var result = "";
+      var characters = "AbcDefghiJklmnOpqrstUvwxYz";
+      var charactersLength = characters.length;
+      for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
       }
-      
-      $(".char").each(function (index) {
-        let text = $(this).text();
-        $(this).attr("letter", text);
-      });
-      
-      $(".nav-item").each(function (index) {
-        function resetText() {
-          if (myInterval !== undefined) {
-            clearInterval(myInterval);
-          }
-          chars.each(function (index) {
-            let letter = $(this).attr("letter");
-            $(this).text(letter);
-          });
+      return result;
+    }
+    
+    $(".char").each(function (index) {
+      let text = $(this).text();
+      $(this).attr("letter", text);
+    });
+    
+    $(".nav-item").each(function (index) {
+      function resetText() {
+        if (myInterval !== undefined) {
+          clearInterval(myInterval);
         }
-      
-        let myInterval;
-        let chars = $(this).find(".char");
-        $(this).on("mouseenter", function () {
-          let length = chars.length;
-          myInterval = setInterval(function () {
-            chars.each(function (index) {
-              if (index < length) {
-                let letter = getRandomLetter(1);
-                $(this).text(letter);
-              } else {
-                let letter = $(this).attr("letter");
-                $(this).text(letter);
-              }
-            });
-            length = length - 1;
-          }, 100);
-          setTimeout(() => {
-            resetText();
-          }, 600);
+        chars.each(function (index) {
+          let letter = $(this).attr("letter");
+          $(this).text(letter);
         });
-        $(this).on("mouseleave", function () {
+      }
+    
+      let myInterval;
+      let chars = $(this).find(".char");
+      $(this).on("mouseenter", function () {
+        let length = chars.length;
+        myInterval = setInterval(function () {
+          chars.each(function (index) {
+            if (index < length) {
+              let letter = getRandomLetter(1);
+              $(this).text(letter);
+            } else {
+              let letter = $(this).attr("letter");
+              $(this).text(letter);
+            }
+          });
+          length = length - 1;
+        }, 100);
+        setTimeout(() => {
           resetText();
-        });
+        }, 600);
       });
+      $(this).on("mouseleave", function () {
+        resetText();
+      });
+    });
 });
 
 // MARQUEE POWER-UP
